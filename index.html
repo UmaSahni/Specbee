@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Specbee</title>
     <link rel="stylesheet" href="index.css" />
   </head>
 
@@ -13,16 +13,55 @@
         <h1>View our Featured Speakers for the Event</h1>
         <p>
           Speakers are core contributors and industry thought leaders working at
-          <a href="*">companies</a> that push for innovation.
+          <a href="#">companies</a> that push for innovation.
         </p>
       </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal-container">
+      <div class="modal" id="modal">
+        <div class="modal-content">
+    
+          <span class="close-btn" id="closeModalBtn">&times;</span>
+          
+          <div class="modal-profile" >
+            <img id="modalImage" src="" alt="Profile Photo" />
+          
+            <div class="modal-profile-details" >
+              <h2 id="modalName">Name</h2>
+              <h4 id="modalTitle">Title</h4>
+              <p id="modalCompany">Company</p>
+              
+              <div class="modal-profile-icons">
+                <img src="images/logo.png" alt="">
+                <img src="images/x.png" alt="">
+                <img src="images/linkdin.png" alt="">
+                
+              </div>
+
+            </div>
+
+            <div class="vl"></div>
+
+            <div>
+              <p>Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas.</p>
+            </div>
+  
+          </div>
+          
+            
+        
+        </div>
+      </div>
+    </div>
+   
 
     <div class="gallery-wrap">
       <img src="images/right.png" id="backBtn" alt="left-arrow-image" />
       <div class="gallery">
         <div>
-          <span class="gallery-image">
+          <span class="openModal" class="gallery-image">
             <img src="images/person1.png" alt="person1-profile-photo" />
 
             <div class="gallery-content">
@@ -32,30 +71,31 @@
               <p>Acme Corp</p>
             </div>
           </span>
-          <span
-            ><img src="images/person2.png" alt="person2-profile-photo" />
+
+          <span class="openModal">
+            <img src="images/person2.png" alt="person2-profile-photo" />
 
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Russell Franco</h2>
               <h4>Chief Engagement Officer</h4>
               <p>Acquia</p>
             </div>
           </span>
-          <span
+          <span class="openModal"
             ><img src="images/person3.png" alt="person3-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Axel Brown</h2>
               <h4>Chief Technical Developer</h4>
               <p>Pantheon</p>
             </div>
           </span>
-          <span
+          <span class="openModal"
             ><img src="images/person4.png" alt="person4-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Harvey Warner</h2>
               <h4>Chief Marketing Officer</h4>
               <p>Specbee</p>
             </div>
@@ -63,38 +103,38 @@
         </div>
 
         <div>
-          <span
+          <span class="openModal"
             ><img src="images/person3.png" alt="person3-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Jay Henry</h2>
               <h4>Chief Technical Developer</h4>
               <p>Pantheon</p>
             </div>
           </span>
-          <span
+          <span class="openModal"
             ><img src="images/person4.png" alt="person4-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Zion Wolf</h2>
               <h4>Chief Engagement Officer</h4>
               <p>Acquia</p>
             </div>
           </span>
-          <span
+          <span class="openModal"
             ><img src="images/person1.png" alt="person1-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Abeba Zinat</h2>
               <h4>Chief Marketing Officer</h4>
               <p>Acme Corp</p>
             </div>
           </span>
-          <span
+          <span class="openModal"
             ><img src="images/person2.png" alt="person2-profile-photo" />
             <div class="gallery-content">
               <div></div>
-              <h2>John Doe</h2>
+              <h2>Bishal Ananda</h2>
               <h4>Chief Technical Developer</h4>
               <p>Pantheon</p>
             </div>
@@ -106,20 +146,17 @@
     </div>
 
     <div class="call-to-action-section">
-       
-            <button> See the Program </button>
+      <button>See the Program</button>
 
-            <p>
-                Click here to see 
-                <br>
-                the full program
-            </p>
-        
-            <img src="images/arrow.png" alt="pointing-arrow">
-        
+      <p>
+        Click here to see
+        <br />
+        the full program
+      </p>
+
+      <img src="images/arrow.png" alt="pointing-arrow" />
     </div>
-    
-    
+
     <script src="index.js"></script>
   </body>
 </html>

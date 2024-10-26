@@ -54,12 +54,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2% auto;
+    margin: 1% auto;
 }
 
 #backBtn{
     rotate: 180deg;
-   
+   cursor: pointer;
+}
+#nextBtn{
+    cursor: pointer;
 }
 
 
@@ -78,6 +81,19 @@
         display: flex;
         overflow-x: scroll;
     }
+
+    .vl{
+        display: none;
+    }
+
+    .modal {
+        width: 100%;
+    }
+    
+    .modal-profile{
+        flex-direction: column;
+    }
+
     /* .gallery {
         width: 90vw;
         max-width: 100%;
@@ -98,12 +114,13 @@
 
 .gallery-content h2{
     margin-bottom:16px;
+    font-family: metropolis-bold;
 }
 
 .gallery-content h4{
     font-size: 1rem;
 }
-.gallery-content p{
+.gallery-content p, #modalCompany{
     color: rgba(107, 107, 107, 0.715);
     margin-top: 0.4rem;
     font-size: 0.9rem;
@@ -156,7 +173,7 @@ text-decoration: none;
 
 
 .call-to-action-section p{
-position: absolute;
+    position: absolute;
     font-family: "Work Sans", sans-serif;
     top: 20px;
     left: 470px;
@@ -170,5 +187,70 @@ position: absolute;
     left: 570px;
 } 
 
+/* Modal styling */
 
+.modal-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.modal {
+    width: 81%;
+    display: none;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 4px 10px 24px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    /* border: 1px solid #333; */
+    /* background-color: #000000; */
+  }
+  
+  .vl {
+    width: 10px;
+    border-left: 1px solid rgba(183, 183, 183, 1);
+    height: 100px;
+  }
+
+#modalName{
+    margin: 1rem 0;
+    font-weight: 800;
+    font-family: metropolis-bold ;
+}
+  .modal-profile{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    /* flex-wrap: wrap; */
+  
+  }
+
+  
+  
+  .modal-profile-details{
+    width: 70%;
+    /* margin: 3rem; */
+    /* border: 1px solid red; */
+  }
+  .close-btn {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .modal-profile-icons{
+    /* border: 1px solid green; */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 

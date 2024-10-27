@@ -8,7 +8,7 @@ The design for this project can be [found here](https://www.figma.com/design/h6L
 
 ## Tasks Implemented
 1. View Speaker Details in a Modal/Popup
-2. Move slider on mouse scroll & button click
+2. Move slider on mouse wheel scroll & button click
 3. Clickable Speaker Cards
 4. Close Functionality
 5. SCSS Usage

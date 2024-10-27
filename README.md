@@ -32,8 +32,8 @@ If you have any questions or feedback, feel free to reach out to me at uma.sahni
 git clone https://github.com/UmaSahni/Specbee.git
 ```
 2. Navigate to the project directory:
-```
-bash cd Specbee
+```bash
+cd Specbee
 ```
 3. Start with live server
 

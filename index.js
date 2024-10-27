@@ -40,6 +40,7 @@ const modal = document.getElementById("modal");
       document.getElementById("modalCompany").innerText = companyText;
 
       modal.style.display = "block";
+      modal.classList.add("transition");
     });
   });
 

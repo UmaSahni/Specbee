@@ -1,3 +1,32 @@
+$primary-color: rgba(0, 63, 180, 1);
+$text-color: rgba(107, 107, 107, 0.715);
+$font-family-main: 'Metropolis', sans-serif;
+$font-family-bold: 'Metropolis-Bold', sans-serif;
+
+// Breakpoints
+$desktop: 1244px;
+$tablet: 851px;
+$mobile: 480px;
+
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+
+
+@mixin button ($backgroundColor:$primary-color, $padding: 1rem 6rem){
+    background-color:$backgroundColor;
+    padding: $padding; 
+    color: white;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem; 
+    cursor: pointer;
+}
+
 @font-face {
     font-family: metropolis;
     src: url(Metropolis-Regular.otf);
@@ -12,13 +41,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: metropolis;
+    font-family: $font-family-main;
 }
 
 .gallery-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     margin: 1% auto;
 }
 
@@ -35,10 +62,7 @@
         flex: none;
 
         span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex-center(column);
             box-shadow: 4px 10px 24px rgba(0, 0, 0, 0.1);
             margin: 1rem;
             border-radius: 10px;
@@ -56,25 +80,23 @@
     }
 }
 
-#backBtn {
-    rotate: 180deg;
+#backBtn, #nextBtn {
     cursor: pointer;
-}
-
-#nextBtn {
-    cursor: pointer;
-}
+  
+    &:nth-child(1) {
+      rotate: 180deg;
+    }
+  }
+  
 
 .gallery-content {
+    @include flex-center(column);
     display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 2px !important;
 
     h2 {
         margin-bottom: 16px;
-        font-family: metropolis-bold;
+        font-family: $font-family-bold;
     }
 
     h4 {
@@ -83,7 +105,7 @@
 
     p,
     #modalCompany {
-        color: rgba(107, 107, 107, 0.715);
+        color: $text-color;
         margin-top: 0.4rem;
         font-size: 0.9rem;
     }
@@ -95,7 +117,7 @@ header {
 
     div {
         h1 {
-            font-family: metropolis-bold;
+            font-family: $font-family-bold;
             font-weight: 800;
         }
 
@@ -112,29 +134,19 @@ header {
 }
 
 .call-to-action-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     width: 100%;
     position: relative;
     padding: 2rem;
    
-    
-     
-  
     button {
-      background-color: rgba(0, 63, 180, 1);
-      padding: 1rem 6rem; 
-      color: white;
-      border-radius: 4px;
-      border: none;
-      font-size: 1rem; 
+    @include button(rgba(0, 63, 180, 1),1rem 6rem );
 
-      @media (max-width: 1244px) {
+      @media (max-width: $desktop) {
         padding: 0.8rem 2rem;
       }
   
-      @media (max-width: 851px) {
+      @media (max-width: $tablet) {
         padding: 0.8rem 1rem; 
       }
   
@@ -149,25 +161,24 @@ header {
       font-size: 1.1rem; 
 
 
-      @media (max-width: 1244px) {
+      @media (max-width: $desktop) {
         top: 40%; 
         font-size: 0.9rem;
       }
   
-      @media (max-width: 851px) {
-        top: 30%; /* Adjust for smaller screens */
-        left: 30%;
+      @media (max-width: $tablet) {
+        top: 30%; 
         font-size: 1rem;
       }
 
       @media (max-width: 676px) {
-        top: 30%; /* Adjust for smaller screens */
+        top: 30%; 
         left: 20%;
         font-size: 0.8rem;
       }
   
-      @media (max-width: 480px) {
-        top: 80%; /* Adjust for smaller screens */
+      @media (max-width: $mobile) {
+        top: 80%; 
         left: 20%;
       }
     }
@@ -178,7 +189,7 @@ header {
       left: 35%; 
       width: 8vw; 
   
-      @media (max-width: 851px) {
+      @media (max-width: $tablet) {
         top: 80%; 
         width: 8vw; 
       }
@@ -189,7 +200,7 @@ header {
 
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: $mobile) {
         width: 30vw;
 
       }
@@ -200,10 +211,8 @@ header {
   
 
 .modal-container {
-    display: flex;
+    @include flex-center;  
     width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 .modal {
@@ -250,12 +259,7 @@ header {
     }
 }
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery {
         width: 700px;
@@ -283,7 +287,7 @@ button {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $mobile) {
     .gallery {
         width: 90vw;
     }

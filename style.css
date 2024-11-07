@@ -10,13 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: metropolis;
+  font-family: "Metropolis", sans-serif;
 }
 
 .gallery-wrap {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 1% auto;
 }
 
@@ -34,9 +35,9 @@
 }
 .gallery div span {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   box-shadow: 4px 10px 24px rgba(0, 0, 0, 0.1);
   margin: 1rem;
   border-radius: 10px;
@@ -50,25 +51,24 @@
   display: none;
 }
 
-#backBtn {
-  rotate: 180deg;
+#backBtn, #nextBtn {
   cursor: pointer;
 }
-
-#nextBtn {
-  cursor: pointer;
+#backBtn:nth-child(1), #nextBtn:nth-child(1) {
+  rotate: 180deg;
 }
 
 .gallery-content {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  display: flex !important;
   gap: 2px !important;
 }
 .gallery-content h2 {
   margin-bottom: 16px;
-  font-family: metropolis-bold;
+  font-family: "Metropolis-Bold", sans-serif;
 }
 .gallery-content h4 {
   font-size: 1rem;
@@ -85,7 +85,7 @@ header {
   text-align: center;
 }
 header div h1 {
-  font-family: metropolis-bold;
+  font-family: "Metropolis-Bold", sans-serif;
   font-weight: 800;
 }
 header div p {
@@ -99,6 +99,7 @@ header a {
 
 .call-to-action-section {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -112,6 +113,7 @@ header a {
   border-radius: 4px;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
 }
 @media (max-width: 1244px) {
   .call-to-action-section button {
@@ -139,21 +141,20 @@ header a {
 }
 @media (max-width: 851px) {
   .call-to-action-section p {
-    top: 30%; /* Adjust for smaller screens */
-    left: 30%;
+    top: 30%;
     font-size: 1rem;
   }
 }
 @media (max-width: 676px) {
   .call-to-action-section p {
-    top: 30%; /* Adjust for smaller screens */
+    top: 30%;
     left: 20%;
     font-size: 0.8rem;
   }
 }
 @media (max-width: 480px) {
   .call-to-action-section p {
-    top: 80%; /* Adjust for smaller screens */
+    top: 80%;
     left: 20%;
   }
 }
@@ -183,9 +184,10 @@ header a {
 
 .modal-container {
   display: flex;
-  width: 100%;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .modal {
@@ -226,12 +228,6 @@ header a {
   height: 100px;
 }
 
-button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .gallery {
     width: 700px;
